@@ -7,7 +7,15 @@ const config = {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js'
     },
-    mode: 'development'
+    mode: 'development',
+    module: {
+        rules: [
+            {
+                use: 'babel-loader',
+                test: /\.js$/
+            }
+        ]
+    }
 
 };
 

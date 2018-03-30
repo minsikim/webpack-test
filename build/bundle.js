@@ -78,7 +78,8 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("//import or require sum.js needed\r\nconst sum = __webpack_require__(/*! ./sum */ \"./src/sum.js\");\r\n\r\nconst total = sum(5,10);\r\nconsole.log(total);\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+"use strict";
+eval("\n\n//import or require sum.js needed\nvar sum = __webpack_require__(/*! ./sum */ \"./src/sum.js\");\n\nvar total = sum(5, 10);\nconsole.log(total);\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -87,9 +88,10 @@ eval("//import or require sum.js needed\r\nconst sum = __webpack_require__(/*! .
   !*** ./src/sum.js ***!
   \********************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("const sum = (a, b) => a + b;\r\n\r\nmodule.exports = sum;\n\n//# sourceURL=webpack:///./src/sum.js?");
+"use strict";
+eval("\n\nvar sum = function sum(a, b) {\n  return a + b;\n};\n\nmodule.exports = sum;\n\n//# sourceURL=webpack:///./src/sum.js?");
 
 /***/ })
 
