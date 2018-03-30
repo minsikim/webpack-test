@@ -6,7 +6,8 @@ const config = {
     output: {
         //must specify it absolute path(build,dist etc)
         path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        publicPath: 'build/'
     },
     // mode: 'development',
     module: {
@@ -21,6 +22,18 @@ const config = {
                     use: 'css-loader'
                 }),
                 test: /\.css$/
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 20000
+                        }
+                    },
+                    'image-webpack-loader'
+                ]
             }
         ]
     },
